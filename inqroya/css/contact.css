@@ -114,14 +114,17 @@ input::placeholder {
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-      grid-template-areas: "jedan" "dva" "tri" "cetiri";
+      grid-template-areas: "jedan"
+ "dva"
+ "tri"
+ "cetiri";
 }
 
 .jedan {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: jedan;
-  background-image: url("/images/logo/logo_rijec_contact_1.svg");
+  background-image: url("/inqroya/images/logo/logo_rijec_contact_1.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -131,7 +134,7 @@ input::placeholder {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: dva;
-  background-image: url("/images/logo/logo_rijec_contact_2.svg");
+  background-image: url("/inqroya/images/logo/logo_rijec_contact_2.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -141,7 +144,7 @@ input::placeholder {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: tri;
-  background-image: url("/images/logo/logo_rijec_contact_3.svg");
+  background-image: url("/inqroya/images/logo/logo_rijec_contact_3.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -151,7 +154,7 @@ input::placeholder {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: cetiri;
-  background-image: url("/images/logo/logo_rijec_contact_4.svg");
+  background-image: url("/inqroya/images/logo/logo_rijec_contact_4.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -250,7 +253,7 @@ footer {
 }
 
 .footer_logo {
-  background-image: url("/images/logo/logo_rijec_i_piramida.svg");
+  background-image: url("/inqroya/images/logo/logo_rijec_i_piramida.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -383,7 +386,8 @@ h3::after {
     grid-auto-rows: 1fr;
     gap: 5vh 0vh;
     grid-auto-flow: row;
-        grid-template-areas: "general c_menu" "legal social";
+        grid-template-areas: "general c_menu"
+ "legal social";
   }
   .general {
     -ms-grid-row: 1;
@@ -429,7 +433,8 @@ h3::after {
     grid-auto-rows: 1fr;
     gap: 5vh 0vh;
     grid-auto-flow: row;
-        grid-template-areas: "general c_menu" "legal social";
+        grid-template-areas: "general c_menu"
+ "legal social";
   }
   .general {
     -ms-grid-row: 1;
