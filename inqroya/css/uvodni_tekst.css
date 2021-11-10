@@ -15,7 +15,6 @@ section {
   position: absolute;
   z-index: 2;
   font-family: 'montbold';
-  display: none;
 }
 
 .text p {
