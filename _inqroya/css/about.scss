@@ -1,0 +1,91 @@
+// boje
+
+$bijela: #F1F1F1; 
+$svijetlije_plava: #3FA8F4;
+$svijetlo_plava: #007CFF;
+$tamno_plava: #004BA8;
+$tamna: #08142F;
+
+
+.sadrzaj_about{
+    min-height: 60vh;
+    color: whitesmoke;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    margin-top: 20vh;
+}
+.about{
+    display: grid;
+    place-items: center;
+}
+.naslov_about{
+    min-height: 60vh;
+    width: 80%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+.naslov_about h1{
+    font-size: clamp(2rem, 10vw, 8rem);
+    color: $bijela;
+    transform: translateX(-10%);
+    position: relative;
+}
+.naslov_about h1::after{
+    content: 'ABOUT US';
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    z-index: -1;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #007CFF;
+    opacity: 0;
+    animation: after 1s ease 1s forwards;
+}
+.naslov_about h1::before{
+    content: 'ABOUT US';
+    z-index: -2;
+    bottom: -20%;
+    left: 0;
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #004BA8;
+    opacity: 0;
+    animation: before 1s ease 2s forwards;
+}
+@keyframes after {
+    from{
+        bottom: 0;
+        opacity: 0;
+    }
+    to{
+        bottom: -20%;
+        opacity: 1;
+    }
+}
+@keyframes before {
+    from{
+        bottom: -20%;
+        opacity: 0;
+    }
+    to{
+        bottom: -40%;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .naslov_about h1{
+        transform: translateX(0%);
+    }
+}
+@media screen and (max-width: 500px) {
+    .naslov_about h1{
+        transform: translateY(50%);
+    }
+}
+

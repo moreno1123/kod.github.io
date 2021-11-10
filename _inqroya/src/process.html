@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inqroya</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/stil.css">
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="/css/process.css">
+</head>
+<body>
+
+    <div id="observer" ></div>
+    <div class="header_pozadina">
+        <header class="header">
+            <div class="logo">
+                    <div id="inq">
+                        <a href="/index.html">
+                            <img src="/images/logo/logo_rijec.svg" alt="Inqroya">
+                        </a>
+                    </div>
+                <a href="/index.html" id="inq_1" class="logo_mobile">
+                    <img src="/images/logo/logo_logo.svg" alt="Inqroya">
+                </a>
+                <a href="/index.html" id="inq_2" class="logo_desktop">
+                    <img src="/images/logo/logo_logo_desktop.svg" alt="Inqroya">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="lista" id="lista">
+                    <a href="/index.html" id="home"><li class="lista_button">HOME</li></a>
+                    <a href="/src/about.html"><li class="lista_button">ABOUT</li></a>
+                    <div class="menu">
+                        <a href="" id="menuu"><li id="menu" class="lista_button">MENU</li></a>
+                        
+                        <div class="menu_content">
+                            <ul>
+                                <a href="/src/what.html"><li>What we do</li></a>
+                                <a href="/src/process.html"><li>Process</li></a>
+                                <a href="/src/studies.html"><li>Case studies</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="/src/contact.html"><li class="lista_button">CONTACT</li></a>
+                </ul>
+                <div class="burger" id="burger">
+                    <div class="line line_1"></div>
+                    <div class="line line_2"></div>
+                    <div class="line line_3"></div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="naslov_process">
+        <h1>OUR PROCESS</h1>
+    </div>
+    
+    <svg id="svg">
+        <line id="line" class="line"/>
+    </svg>  
+    <div class="container_process">  
+        <div class="str_process_sadrzaj strategy">
+            <div class="broj_container strategy" id="strategy">
+                <div class="puls strategy">
+                    
+                </div>
+                <div class="broj strategy"><div class="tocka"></div>1</div>
+            </div>
+            <div class="tekst strategy">
+                <h2>Strategy build out</h2>
+                <p>Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or grups to respond to internal and external stimuli throughout their life. Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or grups to respond to internal and external stimuli throughout their life.Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or group to respond to internal and external stimuli throughout their life.</p>
+            </div>
+        </div>
+        <div class="str_process_sadrzaj implementation">
+            <div class="tekst implementation">
+                <h2>Implementation phase</h2>
+                <p>Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or grups to respond to internal and external stimuli throughout their life. Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or grups to respond to internal and external stimuli throughout their life.Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or group to respond to internal and external stimuli throughout their life.</p>
+            </div>
+            <div class="broj_container implementation" id="implementation">
+                <div class="puls implementation">
+                    
+                </div>
+                <div class="broj implementation"><div class="tocka"></div>2</div>
+            </div>
+        </div>
+        <div class="str_process_sadrzaj conversion">
+            <div class="broj_container conversion" id="conversion">
+                <div class="puls conversion">
+                    
+                </div>
+                <div class="broj conversion"><div class="tocka"></div>3</div>
+            </div>
+            <div class="tekst conversion">
+                <h2>Conversion opmatization</h2>
+                <p>Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or grups to respond to internal and external stimuli throughout their life. Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or grups to respond to internal and external stimuli throughout their life.Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or group to respond to internal and external stimuli throughout their life.</p>
+            </div>
+        </div>
+        <div class="str_process_sadrzaj results">
+            <div class="tekst results">
+                <h2>Results</h2>
+                <p>Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or grups to respond to internal and external stimuli throughout their life. Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or grups to respond to internal and external stimuli throughout their life.Human behavior is the potential and expressed capacity (mentally, physically and socially) of human individuals or group to respond to internal and external stimuli throughout their life.</p>
+            </div>
+            <div class="broj_container results" id="results">
+                <div class="puls results">
+                    
+                </div>
+                <div class="broj results"><div class="tocka"></div>4</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact" id="contact">
+        <div class="contact_content">
+            <form action="https://formsubmit.co/your@email.com" method="POST" id="form" class="form">
+                <!-- honeypot -->
+                <input type="text" name="_honey" style="display: none;">
+                <!-- disable captcha  -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- success page -->
+                <input type="hidden" name="_next" value="">
+
+                <label for="first_name">Frist name</label><br>
+                <input type="text" name="first_name" placeholder="First name" required><br>
+                <label for="last_name">last_name</label><br>
+                <input type="text" name="last_name" placeholder="Last name" required><br>
+                <label for="company_name">Company name</label><br>
+                <input type="text" name="company_name" placeholder="Company name"><br>
+                <label for="email">E-mail</label><br>
+                <input type="email" name="email" placeholder="E-mail" required><br>
+                <input class="submit" type="submit" name="submit" value="Send"
+                class="g-recaptcha" 
+                data-sitekey="reCAPTCHA_site_key" 
+                data-callback='onSubmit' 
+                data-action='submit'>
+            </form>
+            <div class="inqroya_contact">
+                <div class="jedan"></div>
+                <div class="dva"></div>
+                <div class="tri"></div>
+                <div class="cetiri"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
+    <script type="text/javascript" src="/js/proces.js"></script>
+</body>
+<footer class="footer">
+    <div class="footer_container">
+        <div class="footer_content">
+            <div class="general">
+                <h3>General</h3>
+                <a href="/index.html"><p>Home</p></a>
+                <a href="/src/about.html"><p>About us</p></a>
+                <a href="/src/contact.html"><p>Contact</p></a>
+            </div>
+            <div class="c_menu">
+                <h3>Menu</h3>
+                <a href="/src/what.html"><p>What we do</p></a>
+                <a href="/src/process.html"><p>Process</p></a>
+                <a href="/src/studies.html"><p>Case studies</p></a>
+            </div>
+            <div class="Legal">
+                <h3>Legal</h3>
+                <a href=""><p>Terms</p></a>
+                <a href=""><p>Privacy policy</p></a>
+            </div>
+            <div class="social">
+                <h3>Social</h3>
+            </div>
+            <div class="copyright">
+                <p>©2021 Moreno Franjković. All rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer_logo"></div>
+    </div>
+</footer>
+</html>

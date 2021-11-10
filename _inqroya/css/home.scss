@@ -1,0 +1,191 @@
+//Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@font-face {
+    font-family: 'ObviaExpanded';
+    src: url('../fonts/ObviaExpanded.ttf');
+    font-weight: bold;
+} 
+@font-face {
+    font-family: 'ObviaExpanded-Black';
+    src: url('../fonts/ObviaExpanded-Black.ttf');
+    font-weight: bold;
+} 
+@font-face {
+    font-family: 'ObviaExpanded-ObviaExpSemBd';
+    src: url('../fonts/ObviaExpanded-ObviaExpSemBd.ttf');
+    font-weight: bold;
+} 
+
+// boje
+
+$bijela: #F1F1F1; 
+$svijetlije_plava: #3FA8F4;
+$svijetlo_plava: #007CFF;
+$tamno_plava: #004BA8;
+$tamna: #08142F;
+
+
+
+.home_bg{
+    position: absolute;
+    min-width: 105vw;
+    height: 100vh;
+    background-image: url(../images/pocetna_pozadina/pozadina_blur.svg);
+    background-repeat: repeat;
+    background-size: clamp(5.6rem, 9.5%, 7.82rem) auto;
+    left: -10px;
+    top: 0;
+}
+.home_page{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+// Sadržaj na početnoj stranici
+
+.intro{
+    position: relative;
+    top: 45vh;
+    left: 10vw;
+    width: 40%;
+    line-height: 6rem;
+    display: flex;
+    flex-direction: row;
+}
+.intro_tekst p{
+    color: $bijela;
+    font-size: 5rem;
+    font-family: 'ObviaExpanded-ObviaExpSemBd';
+    line-height: 4.5rem;
+}
+.intro_logo{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    transform: scale(1.05);
+    min-height: 100%;
+    max-width: clamp(30vw, 40vw, 50vw);
+    display: flex;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1400px){
+    .intro_tekst p{
+        font-size: clamp(2rem, 4vw, 4rem);
+        line-height: 2.8rem;
+    }
+}
+@media screen and (min-width: 1400px){
+    .intro button{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 800px){
+    .intro_logo{
+        display: none;
+    }
+    .intro{
+        top: 40vh;
+        width: 80%;
+    }
+    .intro_tekst p{
+        text-align: center;
+        width: 80%;
+        font-size: clamp(2rem, 7vw, 5rem);
+        line-height: 3.2rem;
+    }
+    .intro_tekst{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .intro button{
+        margin-top: 5vh;
+    }
+}
+@media screen and (max-width: 600px){
+    .intro_logo{
+        display: none;
+    }
+    .intro{
+        top: 40vh;
+        width: 80%;
+    }
+    .intro_tekst p{
+        text-align: center;
+        width: 100%;
+        font-size: clamp(2rem, 7vw, 5rem);
+        line-height: 3rem;
+    }
+}
+
+
+
+
+
+// PRILAGODBA ZA SVE UREĐAJE--------------------------
+
+
+
+
+// @media screen and (max-width: 600px){
+
+// }
+
+// -----------tablet---------------
+
+// @media screen and (max-width: 900px) and (min-width: 800px) and (min-height: 700px)and (max-height: 900px){
+
+// }
+// @media screen and (max-width: 900px) and (min-width: 800px) and (min-height: 900px)and (max-height: 1200px){
+
+// }
+@media screen and (max-width: 900px) and (min-width: 800px) and (max-height: 1200px) and (min-height: 850px){
+    .intro{
+        top: 30vh;
+        width: 60%;
+    }
+    .intro_logo{
+        position: absolute;
+        top: 20%;
+        transform: scale(1.25);
+        min-height: 100%;
+        max-width: clamp(30vw, 60vw, 70vw);
+        display: flex;
+        align-items: center;
+    }
+    .intro_tekst p{
+        font-size: clamp(2rem, 6vw, 5rem);
+        line-height: 2.8rem;
+    }
+}
+
+
+
+// ----------------telka--------------
+
+// @media screen and (min-width: 991px) and (max-height: 800px){
+
+// }
+@media screen and (min-width: 2500px){
+    .home_page{
+        width: 80%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 auto;
+    }   
+}
+ 
+
+// ------------------mali mobiteli----------
+
+
+// @media screen and (max-width: 400px) and (max-height: 600px){
+
+// }
+// @media screen and (max-width: 400px) and (max-height: 800px) and (min-height: 600px){
+
+// }

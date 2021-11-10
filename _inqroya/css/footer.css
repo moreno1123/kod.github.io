@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@font-face {
+  font-family: 'ObviaExpanded';
+  src: url("../fonts/ObviaExpanded.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'ObviaExpanded-Black';
+  src: url("../fonts/ObviaExpanded-Black.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'ObviaExpanded-ObviaExpSemBd';
+  src: url("../fonts/ObviaExpanded-ObviaExpSemBd.ttf");
+  font-weight: bold;
+}
+
+footer {
+  height: 40vh;
+  min-width: 100%;
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.footer_container {
+  width: 90%;
+  height: 70%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.6fr 1.4fr;
+      grid-template-columns: 0.6fr 1.4fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0vw 0vw;
+  grid-auto-flow: row;
+      grid-template-areas: "footer_logo footer_content";
+}
+
+.footer_logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: footer_logo;
+  background-image: url("/images/logo/logo_rijec_i_piramida.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: start;
+  height: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footer_content {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: footer_content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0vw 3vw;
+  grid-auto-flow: row;
+      grid-template-areas: "general c_menu legal social";
+}
+
+.footer_content::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 95%;
+  bottom: 10px;
+  background-color: #F1F1F1;
+}
+
+h3 {
+  color: #F1F1F1;
+  font-size: 1.2rem;
+  font-weight: 1000;
+  margin-bottom: 1.5rem;
+}
+
+.footer_content a {
+  color: #F1F1F1;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.footer_content p {
+  margin-top: 1rem;
+}
+
+.general {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: general;
+}
+
+.menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: c_menu;
+}
+
+.legal {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: legal;
+}
+
+.social {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: social;
+}
+
+.copyright {
+  position: absolute;
+  bottom: -25px;
+  color: #F1F1F1;
+}
+
+.copyright p {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+/*# sourceMappingURL=footer.css.map */

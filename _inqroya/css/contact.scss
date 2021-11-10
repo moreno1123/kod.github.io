@@ -1,0 +1,359 @@
+// boje
+
+$bijela: #F1F1F1; 
+$svijetlije_plava: #3FA8F4;
+$svijetlo_plava: #007CFF;
+$tamno_plava: #004BA8;
+$tamna: #08142F;
+
+.contact{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#08142F 40%, #02020e);
+    min-width: 100vw;
+    position: relative;
+}
+.contact_content {
+    position: relative;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0vw 8vw;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "form inqroya_contact";
+}
+
+.inqroya_contact { grid-area: inqroya_contact; }
+
+.form { 
+    grid-area: form; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label{
+    position: absolute;
+    color: $bijela;
+    margin-top: 3vh;
+    display: none;
+}
+input{
+    margin-bottom: 3rem;
+    border: none;
+    background-color: inherit;
+    border-bottom: 2px solid $bijela;
+    width: 100%;
+    font-family: 'ObviaExpanded';
+    color: white;
+    font-size: 1rem;
+    padding: .5rem 0;
+}
+input::placeholder{
+    color: white;
+    opacity: 1;
+}
+.submit{
+    border: 2px solid $bijela;
+    border-radius: 20px;
+    padding: 0.5rem 0;
+    background-color: transparent;
+    color: #fff;
+    font-family: 'ObviaExpanded';
+    font-size: 1.1rem;
+    width: 50%;
+    margin: 0;
+}
+
+.inqroya_contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "jedan"
+      "dva"
+      "tri"
+      "cetiri";
+  }
+  
+.jedan { 
+    grid-area: jedan; 
+    background-image: url('/images/logo/logo_rijec_contact_1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}  
+.dva { 
+    grid-area: dva; 
+    background-image: url('/images/logo/logo_rijec_contact_2.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+.tri { 
+    grid-area: tri; 
+    background-image: url('/images/logo/logo_rijec_contact_3.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+.cetiri { 
+    grid-area: cetiri; 
+    background-image: url('/images/logo/logo_rijec_contact_4.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .inqroya_contact{
+        height: 80%;
+        align-self: center;
+    }
+}
+@media screen and (max-width: 850px) {
+    .inqroya_contact{
+        position: absolute;
+        width: 80%;
+        min-height: 100%;
+        opacity: 0.6;
+        filter: blur(0.1rem);
+        align-self: center;
+    }
+    .contact_content{
+        display: flex;
+        max-width: 60%;
+        justify-content: center;
+    }
+    .form{
+        min-width: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .inqroya_contact{
+        min-height: 40%;
+    }
+    .contact_content{
+        max-width: 70%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .inqroya_contact{
+        max-height: 70%;
+    }
+    .contact_content{
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .inqroya_contact{
+        max-height: 60%;
+    }
+    .contact_content{
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+// --------------------------------------------------------
+// ----------------------- footer -------------------------
+// --------------------------------------------------------
+
+
+
+
+footer{
+    position: relative;
+    min-width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer_container {
+    position: relative;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+  
+.footer_logo { 
+    background-image: url('/images/logo/logo_rijec_i_piramida.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    width: 25%;
+    margin-left: 5vw;
+    position: absolute;
+    right: 0;
+}
+
+.footer_content {
+    position: relative;
+    width: 70%;
+    display: flex;
+    gap: 5vw;
+    justify-content: space-between;
+    z-index: 1;
+}
+.footer_content::after {
+    content: '';
+    background-color: $bijela;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -10px;
+}
+h3{
+    position: relative;
+    color: $bijela;
+    font-size: 1.2rem;
+    font-weight: 1000;
+    margin-bottom: 1.5rem;
+}
+h3::after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 3rem;
+    height: 1px;
+    background-color: $bijela;
+    left: 0;
+}
+.footer_content a{  
+    color: $bijela;
+    text-decoration: none;
+    font-weight: 100;
+}
+.footer_content p{  
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+.footer_content p:hover{  
+    transform: translateX(0.5rem);
+}
+.copyright{
+    position: absolute;
+    bottom: -40px;
+    color: $bijela;
+}
+.copyright p{
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+.social{
+    transform: translateX(-1rem);
+}
+
+
+@media screen and (max-width: 890px) {
+    h3{
+        font-size: 0.8rem;
+    }
+    .footer_content p{  
+        font-size: 0.8rem;
+    }
+    .copyright p{
+        font-size: 0.6rem;
+    }
+    h3::after{
+        width: 2rem;
+    }
+}
+@media screen and (max-width: 750px) {
+    .footer_content{
+        width: 90%;
+    }
+    .footer_logo{
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        filter: blur(0.1rem);
+        opacity: 0.6;
+        background-position: center;
+    }
+    .footer_container{
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    .footer_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        gap: 5vh 0vh;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "general c_menu"
+          "legal social";
+    }
+      
+    .general { grid-area: general; }
+    
+    .menu { grid-area: c_menu; }
+    
+    .legal { grid-area: legal; }
+    
+    .social { grid-area: social; }
+
+    .footer_logo{
+        height: 60%;
+    } 
+    .social{
+        transform: translateX(0rem);
+    }
+}
+@media screen and (max-width: 400px) {
+    .footer_container{
+        width: 80%;
+    }
+    .footer_content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        gap: 5vh 0vh;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "general c_menu"
+          "legal social";
+    }
+      
+    .general { grid-area: general; }
+    
+    .menu { grid-area: c_menu; }
+    
+    .legal { grid-area: legal; }
+    
+    .social { grid-area: social; }
+
+    .footer_logo{
+        height: 50%;
+    } 
+}
+@media screen and (max-width: 360px) {
+    .copyright p{
+        font-size: 0.5rem;
+    }
+}

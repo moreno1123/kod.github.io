@@ -1,0 +1,353 @@
+// boje
+
+$bijela: #F1F1F1; 
+$svijetlije_plava: #3FA8F4;
+$svijetlo_plava: #007CFF;
+$tamno_plava: #004BA8;
+$tamna: #08142F;
+
+.case_studies_str{
+    min-height: 60vh;
+    display: grid;
+    place-items: center;
+}
+.case_studies{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.case_studies_content {
+    position: relative;
+    max-width: 70%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0vw 5vw;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "graph case_studies_text";
+  }
+  .graph { grid-area: graph; }
+  
+  .case_studies_text { grid-area: case_studies_text; }
+
+  .graph{
+    background-image: url('/images/graf/graf.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+.case_studies_text{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+.case_studies_title{
+    position: relative;
+}
+.case_studies_title::after{
+    content: 'CASE STUDIES';
+    font-size: 4.2rem;
+    color: $svijetlo_plava;
+    opacity: 0.5;
+    position: absolute;
+    white-space: nowrap;
+    left: -2%;
+    z-index: -1;
+}
+.words{
+    text-align: left;
+    display: block;
+    margin-top: 2vh;
+    color: $bijela;
+}
+.words.str{
+margin-top: 5vh;
+}
+.numbers{
+    display: inline-block;
+    color: $bijela;
+    font-size: clamp(2rem,5rem,5rem);
+    height: auto;
+    text-align: center;
+    width: 100%;
+}
+.case_button{
+    position: absolute;
+    bottom: 5vh;
+    left: 45%;
+}
+.case_button_str{
+    display: none;
+}
+.case_studies_details_str{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width: 1200px) {
+
+    .case_studies_content.home{
+        max-height: 80%;
+        gap: 5vh;
+        min-width: 80%;
+        transform: translateY(-25%);
+    }
+    .case_button{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 30%;
+        padding: 0.8rem 2rem; 
+        font-size: 0.8rem;
+        align-self: center;
+    }
+}
+@media screen and (max-width: 800px){
+    .numbers{
+        font-size: 3rem;
+    }
+    .case_button{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 700px){
+    .case_studies_title{
+        font-size: 3rem;
+    }
+    .case_studies_title::after{
+        font-size: 3.2rem;
+    }
+}
+@media screen and (max-width: 600px){
+    .case_studies_title{
+        font-size: 2.5rem;
+    }
+    .case_studies_title::after{
+        font-size: 2.7rem;
+        left: -2%;
+        letter-spacing: 1px;
+    }
+    .numbers{
+        font-size: 2rem;
+    }
+    .case_button{
+        width: 50%;
+    }
+    .case_studies{
+        min-height: 180vh;
+    }
+    .case_studies_content.home{
+        max-height: 80%;
+        gap: 5vh;
+        min-width: 80%;
+        transform: translateY(-40%);
+    }
+}
+@media screen and (max-width: 500px){
+    .case_studies_title{
+        font-size: 2.2rem;
+    }
+    .case_studies_title::after{
+        font-size: 2.4rem;
+    }
+}
+@media screen and (max-width: 400px){
+    .case_button{
+        width: 60%;
+    }
+}
+
+
+
+
+// --------------------------------------------------------------------------------------------------
+// -------------------------------------- case studies stranica -------------------------------------
+// --------------------------------------------------------------------------------------------------
+
+
+// container------------------------
+
+
+.container_case{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+// naslov--------------------
+
+.naslov_case{
+    min-height: 70vh;
+    width: 80%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+.naslov_case h1{
+    font-size: clamp(2rem, 10vw, 8rem);
+    color: $bijela;
+    transform: translateX(-10%);
+    position: relative;
+}
+.naslov_case h1::after{
+    content: 'CASE STUDIES';
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    z-index: -1;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #007CFF;
+    opacity: 0;
+    animation: after 1s ease 1s forwards;
+}
+.naslov_case h1::before{
+    content: 'CASE STUDIES';
+    z-index: -2;
+    bottom: -20%;
+    left: 0;
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #004BA8;
+    opacity: 0;
+    animation: before 1s ease 2s forwards;
+}
+@keyframes after {
+    from{
+        bottom: 0;
+        opacity: 0;
+    }
+    to{
+        bottom: -20%;
+        opacity: 1;
+    }
+}
+@keyframes before {
+    from{
+        bottom: -20%;
+        opacity: 0;
+    }
+    to{
+        bottom: -40%;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .naslov_case h1{
+        transform: translateX(0%);
+    }
+}
+@media screen and (max-width: 500px) {
+    .naslov_case h1{
+        transform: translateY(50%);
+    }
+}
+
+// grafovi------------------------
+
+
+
+.case1{
+    max-width: 70%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    justify-content: space-evenly;
+}
+.graph1{
+    background-image: url('/images/graf/graf1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 40%;
+    min-height: 100%;
+}
+.sadrzaj{
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+// prilagodavanje----------------------------
+
+
+@media screen and (min-width: 1200px) {
+    .case1.mob1{
+        display: none;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .case_studies_str{
+        min-height: 80vh;
+    }
+    .case_studies_content {
+        max-width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+    }
+    .graph{
+        min-height: 60%;
+    }
+    .case1{
+        min-height: 80vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .graph1{
+        min-height: 30vh;
+        min-width: 60%;
+    }
+    .case1.mob{
+        display: none;
+    }
+    .sadrzaj{
+        min-width: 80%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .case_studies_text{
+        flex-direction: column;
+        gap: 5vh;
+    }
+    .case_studies_content {
+        max-width: 80%;
+        gap: 0vh;
+    }
+    .case_studies_str{
+        min-height: 100vh;
+    }
+    .words{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+    .case1{
+        min-height: 100vh;
+        min-width: 80%;
+    }
+    .sadrzaj{
+        min-width: 100%;
+    }
+    .graph1{
+        min-width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .case_studies_str{
+        min-height: 125vh;
+    }
+}

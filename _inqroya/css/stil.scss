@@ -1,0 +1,104 @@
+// boje
+
+$bijela: #F1F1F1; 
+$svijetlije_plava: #3FA8F4;
+$svijetlo_plava: #007CFF;
+$tamno_plava: #004BA8;
+$tamna: #08142F;
+
+//Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@font-face {
+    font-family: 'ObviaExpanded';
+    src: url('../fonts/ObviaExpanded.ttf');
+    font-weight: bold;
+} 
+@font-face {
+    font-family: 'ObviaExpanded-Black';
+    src: url('../fonts/ObviaExpanded-Black.ttf');
+    font-weight: bold;
+} 
+@font-face {
+    font-family: 'ObviaExpanded-ObviaExpSemBd';
+    src: url('../fonts/ObviaExpanded-ObviaExpSemBd.ttf');
+    font-weight: bold;
+} 
+@font-face {
+    font-family: 'montlight';
+    src: url('../fonts/Montserrat-Light.ttf');
+    font-weight: bold;
+} 
+@font-face {
+    font-family: 'montregular';
+    src: url('../fonts/Montserrat-Regular.ttf');
+    font-weight: bold;
+} 
+@font-face {
+    font-family: 'montbold';
+    src: url('../fonts/Montserrat-SemiBold.ttf');
+    font-weight: bold;
+} 
+
+//Generalna svojstva
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+    height: 100%;
+    display: inline-block;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    overflow-x: hidden;
+    position: relative;
+    background-color: $tamna;
+    min-width: 100vw;
+}
+#root{
+    min-width: 100vw;
+}
+button{
+    font-family: 'ObviaExpanded';
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+    padding: 1.2rem 3rem;
+    border-radius: 30px;
+    background-color: $svijetlo_plava;
+    color: $bijela;
+    border-color: transparent;
+}
+@media screen and (max-width: 400px){
+    button{
+        padding: 0.8rem 2rem; 
+        font-size: 0.8rem;
+    }
+}
+p{
+    line-height: 1.4rem;
+    font-size: 1rem;
+    font-family: 'montregular';
+}
+h1{
+    font-family: 'ObviaExpanded-ObviaExpSemBd';
+    font-weight: bold;
+    font-size: 4rem;
+    color: #fff;
+    letter-spacing: 2px;
+}

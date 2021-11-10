@@ -1,0 +1,658 @@
+// Boje-------------------------
+
+$zelena: #192A32; 
+
+//Font---------------------
+
+@font-face {
+    font-family: 'nowbold';
+    src: url('/font/Now-Bold.ttf');
+    font-weight: bold;
+} 
+@font-face {
+    font-family: 'nowlight';
+    src: url('/font/Now-Light.ttf');
+    font-weight: bold;
+} 
+@font-face {
+    font-family: 'nowregular';
+    src: url('/font/Now-Regular.ttf');
+    font-weight: bold;
+} 
+:root{
+    font-family: "nowlight";
+    --fs-xl: clamp(2rem, 5vw, 6rem);
+    --fs-700: 2.5rem;
+    --fs-600: 2.25rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1.25rem;
+    --fs-nav: 1.35rem;
+    --fs-telka: 1rem;
+    --fs-telka-2: 1.55rem;
+    color: #fff;
+}
+@media (max-width: 930px) {
+    :root{
+        --fs-xl: clamp(3rem, 5vw, 6rem);
+        --fs-700: 1.75rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1rem;
+        --fs-400: 0.9rem;
+    }
+}
+a, p, h1, h2, h3, h4{
+    color: #fff;
+}
+nav{
+    font-size: var(--fs-500);
+}
+h2{
+    font-size: var(--fs-600);
+    font-family: "nowbold";
+    letter-spacing: 2px;
+}
+h3{
+    font-size: var(--fs-600);
+    font-family: "nowregular";
+}
+p{
+    font-size: var(--fs-400);
+}
+
+//Generalna svojstva--------------------
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: $zelena;
+}
+
+// BROJ TELEFONA----------------------
+.tel{
+    font-size: var(--fs-500);
+    position: fixed;
+    bottom: 3vh;
+    right: 10vw;
+}
+@media (max-width: 990px) {
+    .tel{
+        display: none;
+    }
+}
+
+
+// SCROLLER----------------------
+
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+@media (max-width: 991px){
+    .container{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        transform: none !important;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+}
+
+
+// SVAKA STRANICA------------------------
+
+.container section{
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+
+// NAVIGACIJA---------------------
+
+header{
+    position: fixed;
+    z-index: 1;
+    width: 35%;
+    height: 7rem;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 14vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: var(--fs-nav);
+}
+.lista{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2vw;
+    white-space: nowrap;
+    padding: 0.5rem;
+    transition: all 0.5s ease;
+}
+.lista li a{
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+.lista li a:active, .lista li a:hover{
+    color: red;
+}
+.lista_button.tel{
+    display: none;
+}
+.logo{
+    position: relative;
+    height: 2.5rem;
+    min-width: clamp(8rem, 12vw, 14rem);
+    background-image: url('/slike/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.logo a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.burger{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1.6rem;
+    width: 2.5rem;
+    display: none;
+    cursor: pointer;
+}
+.burger .crta{
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5px;
+    margin-left: 0;
+    transition: all 0.3s ease;
+}
+.burger .crta.jedan{
+    margin-top: 0;
+}
+.burger .crta.dva{
+    margin-bottom: 0;
+}
+.toggle .crta.jedan{
+    transform: rotate(-45deg) translate(-5px, 7px);
+}
+.toggle .crta.dva{   
+    opacity: 0;
+}
+.toggle .crta.tri{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+@media (max-width: 991px) {
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .burger{    
+        display: block;
+        top: 1.32rem;
+        right: 10vw;
+        z-index: 10;
+    }
+    .lista{
+        position: absolute;
+        min-width: 100vw;
+        top: 0;
+        right: 0;
+        min-height: 100vh;
+        padding: 0;
+        background-color: $zelena;
+        transform: translateX(100%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    .lista li{
+        padding: 1.5rem;
+        font-family: "nowregular";
+        font-size: var(--fs-600);
+    }
+    .logo{
+        margin-left: 10vw;
+        z-index: 10;
+    }
+    header{
+        width: 100%;
+        height: 4rem;
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+        background-color: $zelena;
+        font-size: var(--fs-500);
+    }
+    .lista_button.tel{
+        display: block;
+        position: absolute;
+        top: 4rem;
+        right: 2vw;
+        font-size: var(--fs-400);
+        padding: 0;
+        height: 8%;
+    }
+}
+@media (max-width: 600px) {
+    .logo{
+        min-width: clamp(6rem, 12vw, 14rem);
+    }
+}
+.lista_active{
+    transform: translateX(0%);   
+}
+
+
+// POCETNA STRANICA-----------------------
+
+.container_pocetna{
+    position: relative;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.covjeculjak{
+    position: absolute;
+    background-image: url('/slike/covjeculjak.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75%;
+    width: 50%;
+    z-index: -1;
+    right: 0;
+    bottom: 10%;
+}
+.pocetni_tekst{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.pocetni_tekst h1{
+    font-size: var(--fs-xl);
+    font-family: "nowbold";
+    letter-spacing: 2px;
+}
+.pocetni_tekst p{
+    font-size: var(--fs-700);
+}
+.pocetni_tekst a{
+    font-family: "nowregular";
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: var(--fs-400);
+    border: white solid 2px;
+    box-sizing: border-box;
+    width: 25%;
+    height: 4rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+@media screen and (max-width: 400px){
+    .container_pocetna{
+        position: relative;
+        height: 60%;
+        width: 80%;
+        align-items: flex-start;
+    }
+    .covjeculjak{
+        height: 90%;
+        width: 100%;
+        opacity: 0.5;
+        bottom: 0%;
+    }
+    .pocetni_tekst h1{
+        line-height: 3rem;
+    }
+    .pocetni_tekst a{
+        width: 50%;
+        height: 3rem;
+    }
+    .pocetni_tekst p{
+        font-size: var(--fs-600);
+        margin-top: 0.5rem;
+    }
+}
+
+
+
+// O NAMA------------------------------------
+
+.container_onama{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2vh;
+}
+.container_onama h2{
+    margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+    .container_onama{
+        width: 80%;
+    }
+}
+@media (max-width: 400px) {
+    .container_onama{
+        width: 90%;
+    }
+}
+
+// SERVIS DIZALA------------------------------------
+
+.container_dizala{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    gap: 5vw;
+}
+.dizala_tekst{
+    position: relative;
+    margin-top: 10%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+.container_dizala h2{
+    transform: translateY(-1rem);
+}
+.dizala_radno_vrijeme{
+    text-align: center;
+    transform: translateY(20%);
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.dizala_radno_vrijeme h3{
+    line-height: 90%;
+    margin-bottom: 1rem;
+}
+.pozadina{
+    position: absolute;
+    transform: translateY(-7rem);
+    height: 35vh;
+    width: 120%;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url('/slike/liftovi2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+}
+.radno_vrijeme_pozadina{
+    display: none;
+}
+@media (max-width: 600px) {
+    .container_dizala{
+        width: 100%;
+        flex-direction: column;
+    }
+    .dizala_tekst{
+        width: 80%;
+    }
+    #dizala{
+        margin-bottom: 10vh;
+    }
+    .radno_vrijeme p{
+        margin-bottom: 1vh;
+    }
+    .dizala_radno_vrijeme{
+        min-width: 100vw;
+    }
+    .radno_vrijeme_pozadina{
+        display: block;
+        position: absolute;
+        bottom: -9%;
+        right: 0;
+        min-width: 100vw;
+        height: 120%;
+        margin: 0 auto;
+        background-color: black;
+        opacity: 0.4;
+        z-index: -1; 
+    }
+}
+@media (max-width: 400px) {
+    .dizala_tekst{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+    .dizala_radno_vrijeme{
+        text-align: center;
+        transform: translateY(20%);
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        margin: 5vh 0;
+    }
+
+}
+
+
+
+
+// TRGOVINA STRANICA------------------------------
+
+
+.container_trgovina{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+.container_trgovina_jedan{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3vh;
+}
+@media screen and (max-width: 400px){
+    .container_trgovina{
+        margin-top: 25vh;
+    }
+}
+
+
+
+
+
+
+// KONTAK STR---------------------------
+
+
+.container_kontakt{
+    width: 70%;
+    display: flex;
+    gap: 6vw;
+    max-height: 70%;
+    justify-content: space-between;
+}
+.kontakt_lijevo{
+    display: flex;
+    flex-direction: column;
+}
+.kontakt_lijevo h1{
+    font-family: "nowbold";
+    font-size: var(--fs-700);
+}
+.kontakt_lijevo h4{
+    font-size: var(--fs-600);
+    margin: 5vh 0;
+}
+.kontakt_lijevo span{
+    font-family: "nowbold";
+}
+.jedan{
+    margin-bottom: 3vh;
+}
+.kontakt_desno{
+    align-self: flex-end;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    width: clamp(40%, 10vw, 20%);
+}
+.mb:nth-child(2){
+    text-align: end;
+}
+.mb_mob{
+    display: none;
+}
+.karta{
+    background-color: wheat;
+    overflow:hidden;
+    padding-bottom:66.25%;
+    position:relative;
+    height: 0;
+}
+.karta iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+@media (max-width: 600px) {
+    .container_kontakt{
+        width: 80%;
+        flex-direction: column;
+        gap: 6vw;
+        max-height: 70%;
+        justify-content: space-between;
+    }
+    .kontakt_desno{
+        gap: 2vh;
+        min-width: 100%;
+    }
+    .mb{
+        display: none;
+    }
+    .mb_mob{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+}
+
+
+
+// PRILAGODBA ZA SVE UREĐAJE--------------------------
+
+
+
+
+@media screen and (max-width: 600px){
+    #o_nama{
+        height: 80vh;
+    }
+    #dizala{
+        padding-top: 45vh;
+    }
+}
+
+// -----------tablet---------------
+
+@media screen and (max-width: 900px) and (min-width: 800px) and (min-height: 700px)and (max-height: 900px){
+    .container section{
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 900px) and (min-width: 800px) and (min-height: 900px)and (max-height: 1200px){
+    .container section{
+        height: 70vh;
+    }
+    #pocetna{
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 900px) and (min-width: 800px) and (min-height: 1200px){
+    #pocetna{
+        min-height: 90vh;
+    }
+    .container section{
+        height: 55vh;
+    }
+}
+
+
+
+// ----------------telka--------------
+
+@media screen and (min-width: 991px) and (max-height: 800px){
+    p{
+        font-size: var(--fs-telka);
+    }
+    h1, h4, h2, h3, .kontakt_lijevo h4, .kontakt_lijevo h1{
+        font-size: var(--fs-telka-2);
+    }
+}
+ 
+
+// ------------------mali mobiteli----------
+
+
+@media screen and (max-width: 400px) and (max-height: 600px){
+    .container section{
+        height: 125vh;
+    }
+}
+@media screen and (max-width: 400px) and (max-height: 800px) and (min-height: 600px){
+    #dizala{
+        margin-top: 20vh;
+    }
+}

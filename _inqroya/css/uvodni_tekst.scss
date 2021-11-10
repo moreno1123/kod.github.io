@@ -1,0 +1,156 @@
+// boje
+
+$bijela: #F1F1F1; 
+$svijetlije_plava: #3FA8F4;
+$svijetlo_plava: #007CFF;
+$tamno_plava: #004BA8;
+$tamna: #08142F;
+
+
+section{
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10vh;
+}
+.text{
+    width: 40%;
+    text-align: center;
+    color: $bijela;
+    position: absolute;
+    z-index: 2;
+    font-family: 'montbold';
+}
+.text p{
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    font-family: 'montbold';
+}
+.linije{
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url('/images/svg_pozadina/prvisloj.svg');
+    z-index: -4;
+    opacity: 0.3;
+}
+.linije::before{
+    content: '';
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url('/images/svg_pozadina/drugisloj.svg');
+    z-index: -3;
+}
+.linije::after{
+    content: '';
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url('/images/svg_pozadina/trecisloj.svg');
+    z-index: -2;
+}
+.linije_ispred{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('/images/svg_pozadina/inqroya.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    opacity: 0.18;
+}
+
+
+@media screen and (max-width: 1400px){
+    .text{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 800px){
+    .text{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 600px){
+    .text{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 400px){
+    .text{
+        width: 90%;
+    }
+}
+// @media screen and (min-width: 1400px){
+
+// }
+// @media screen and (max-width: 800px){
+
+// }
+// @media screen and (max-width: 600px){
+
+// }
+
+
+
+
+
+// PRILAGODBA ZA SVE UREĐAJE--------------------------
+
+
+
+
+// @media screen and (max-width: 600px){
+
+// }
+
+// -----------tablet---------------
+
+// @media screen and (max-width: 900px) and (min-width: 800px) and (min-height: 700px)and (max-height: 900px){
+
+// }
+// @media screen and (max-width: 900px) and (min-width: 800px) and (min-height: 900px)and (max-height: 1200px){
+
+// }
+// @media screen and (max-width: 900px) and (min-width: 800px) and (max-height: 1200px) and (min-height: 900px){
+
+// }
+
+
+
+// ----------------telka--------------
+
+// @media screen and (min-width: 991px) and (max-height: 800px){
+
+// }
+@media screen and (min-width: 2500px){
+    .text p{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+ 
+
+// ------------------mali mobiteli----------
+
+
+// @media screen and (max-width: 400px) and (max-height: 600px){
+
+// }
+// @media screen and (max-width: 400px) and (max-height: 800px) and (min-height: 600px){
+
+// }
+
+
+
