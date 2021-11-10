@@ -51,7 +51,7 @@ section {
   min-height: 100%;
   left: 0;
   top: 0;
-  background-image: url("./inqroya/images/svg_pozadina/trecisloj.svg");
+  background-image: url("/inqroya/images/svg_pozadina/trecisloj.svg");
   z-index: -2;
 }
 
