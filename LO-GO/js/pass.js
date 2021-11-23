@@ -1,5 +1,5 @@
 var password;
-var pass = "12345";
+var pass = "bratic";
 password = prompt('Lozika:', ' ');
 if (password == pass){
   alert('Nastavi')
