@@ -1,6 +1,6 @@
 var password;
 var pass = "bratic123";
-password = prompt('Lozika:', ' ');
+password = prompt('Lozika:', '');
 if (password == pass){
   alert('Nastavi')
 }else{
